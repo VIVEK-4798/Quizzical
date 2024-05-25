@@ -1,0 +1,140 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "How many scoring zones are there on a conventional dart board?",
+      "correct_answer": "82",
+      "incorrect_answers": [
+        "62",
+        "42",
+        "102"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "What national team won the 2016 edition of UEFA European Championship?",
+      "correct_answer": "Portugal",
+      "incorrect_answers": [
+        "France",
+        "Germany",
+        "England"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Which portuguese island is soccer player Cristiano Ronaldo from?",
+      "correct_answer": "Madeira",
+      "incorrect_answers": [
+        "Terceira",
+        "Santa Maria",
+        "Porto Santo"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "At which bridge does the annual Oxford and Cambridge boat race start?",
+      "correct_answer": "Putney",
+      "incorrect_answers": [
+        "Hammersmith",
+        "Vauxhall ",
+        "Battersea"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Which of the following pitchers was named National League Rookie of the Year for the 2013 season?",
+      "correct_answer": "Jose Fernandez",
+      "incorrect_answers": [
+        "Jacob deGrom",
+        "Shelby Miller",
+        "Matt Harvey"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Which of these teams isn&#039;t a member of the NHL&#039;s &quot;Original Six&quot; era?",
+      "correct_answer": "Philadelphia Flyers",
+      "incorrect_answers": [
+        "New York Rangers",
+        "Toronto Maple Leafs",
+        "Boston Bruins"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "What is the oldest team in the NFL?",
+      "correct_answer": "Arizona Cardinals",
+      "incorrect_answers": [
+        "Chicago Bears",
+        "Green Bay Packers",
+        "New York Giants"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "In Formula 1, the Virtual Safety Car was introduced following the fatal crash of which driver?",
+      "correct_answer": "Jules Bianchi",
+      "incorrect_answers": [
+        "Ayrton Senna",
+        "Ronald Ratzenberger",
+        "Gilles Villeneuve"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Who won the 2015 College Football Playoff (CFP) National Championship? ",
+      "correct_answer": "Ohio State Buckeyes",
+      "incorrect_answers": [
+        "Alabama Crimson Tide",
+        "Clemson Tigers",
+        "Wisconsin Badgers"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Which Formula 1 driver switched teams in the middle of the 2017 season?",
+      "correct_answer": "Carlos Sainz Jr.",
+      "incorrect_answers": [
+        "Daniil Kvyat",
+        "Jolyon Palmer",
+        "Rio Haryanto"
+      ]
+    }
+  ]
+}
+
+Summary of Changes:
+State Management:
+Added selectedAnswers state to keep track of user selections.
+Handling Answer Changes:
+Added a function handleAnswerChange to update the selectedAnswers state when a user selects an answer.
+Fetching Quiz Data:
+Added error handling.
+Processed and combined answers directly within the question objects.
+Used Promise.all to ensure all questions and their answers are resolved before setting the state.
+Dynamic Rendering:
+Used map to iterate over questions and answers, dynamically generating the question text and answer options.
+Ensured each question's answers are grouped and uniquely identified.
+Managed the checked state of radio buttons based on user selections.
+Enhanced layout and styling for better user experience.
