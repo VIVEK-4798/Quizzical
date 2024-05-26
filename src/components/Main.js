@@ -95,8 +95,8 @@ function Main() {
         </div>
       ):(
         <>
-        <form onSubmit = {handleSubmit}>
-      <div className="bg-[#F5F7FB] w-[800px] h-[800px] flex flex-col justify-center items-center relative mt-[100px] rounded-[12px] p-4">
+        <form onSubmit = {handleSubmit} className="max-sm:flex max-sm:flex-col max-sm:items-center">
+      <div className="bg-[#F5F7FB] w-[800px] max-sm:w-[350px]  max-sm:h-auto h-[800px] flex flex-col justify-center items-center relative mt-[100px] rounded-[12px] p-4">
         {quizQuestion.length === 0 ? (
           <p>Loading...</p>
         ) : (
@@ -105,7 +105,7 @@ function Main() {
             <p className="relative text-[#293264] text-center text-[16px] mb-[6px] z-10">
               {question.question}
           </p>
-          <fieldset className="flex justify-center w-full flex-wrap gap-3 relative z-10">
+          <fieldset className="flex max-sm:flex-col justify-center w-full flex-wrap gap-3 relative z-10">
           <legend className="sr-only">Answers</legend>
           {question.answers.map((answer,i)=>(
             <div key={i} className="flex justify-center" >
@@ -131,16 +131,16 @@ function Main() {
           )}
         <img
           src={image1}
-          className="absolute top-0 right-0 rounded-[12px] z-0"
+          className="absolute top-0 right-0 rounded-[12px] z-0 max-sm:w-0 max-sm:h-0"
           alt=" "
         />
         <img
           src={image2}
-          className="absolute bottom-0 left-0 rounded-[12px] z-0"
+          className="absolute bottom-0 left-0 rounded-[12px] z-0 max-sm:w-0 max-sm:h-0"
           alt=" "
         />
       </div>
-      <button className="bg-[#4D5B9E] w-[150px] h-[52px] rounded-[14px] mt-[18px] ml-[305px] text-white flex justify-center items-center" 
+      <button className="bg-[#4D5B9E]  max-sm:ml-0 max-sm:self-center w-[150px] h-[52px] rounded-[14px] mt-[18px] ml-[312px] text-white flex justify-center items-center" 
       type="submit">
         Submit
       </button>
